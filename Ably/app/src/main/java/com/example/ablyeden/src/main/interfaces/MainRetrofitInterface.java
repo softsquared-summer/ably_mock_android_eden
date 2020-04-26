@@ -1,6 +1,8 @@
-package com.example.ably_eden.src.main.interfaces;
+package com.example.ablyeden.src.main.interfaces;
 
-import com.example.ably_eden.src.main.models.DefaultResponse;
+
+
+import com.example.ablyeden.src.main.models.DefaultResponse;
 
 import okhttp3.RequestBody;
 import retrofit2.Call;

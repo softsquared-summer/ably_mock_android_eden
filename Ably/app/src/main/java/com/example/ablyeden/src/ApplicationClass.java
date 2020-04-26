@@ -1,10 +1,9 @@
-package com.example.ably_eden.src;
+package com.example.ablyeden.src;
 
 import android.app.Application;
 import android.content.Context;
 import android.content.SharedPreferences;
-
-import com.example.ably_eden.config.XAccessTokenInterceptor;
+import com.example.ablyeden.config.XAccessTokenInterceptor;
 
 import java.text.SimpleDateFormat;
 import java.util.Locale;

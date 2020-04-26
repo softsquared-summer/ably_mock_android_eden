@@ -1,4 +1,4 @@
-package com.example.ably_eden.src.main.today;
+package com.example.ablyeden.src.main.fragment_home.today;
 
 
 public class TodayFragment {

@@ -1,4 +1,4 @@
-package com.example.ably_eden.config;
+package com.example.ablyeden.config;
 
 import androidx.annotation.NonNull;
 
@@ -8,8 +8,8 @@ import okhttp3.Interceptor;
 import okhttp3.Request;
 import okhttp3.Response;
 
-import static com.example.ably_eden.src.ApplicationClass.X_ACCESS_TOKEN;
-import static com.example.ably_eden.src.ApplicationClass.sSharedPreferences;
+import static com.example.ablyeden.src.ApplicationClass.X_ACCESS_TOKEN;
+import static com.example.ablyeden.src.ApplicationClass.sSharedPreferences;
 
 
 public class XAccessTokenInterceptor implements Interceptor {

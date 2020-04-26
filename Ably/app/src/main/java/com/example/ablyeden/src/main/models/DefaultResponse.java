@@ -1,4 +1,4 @@
-package com.example.ably_eden.src.main.models;
+package com.example.ablyeden.src.main.models;
 
 import com.google.gson.annotations.SerializedName;
 

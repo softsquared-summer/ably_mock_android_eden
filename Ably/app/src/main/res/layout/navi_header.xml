@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginTop="25dp"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/first_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/drawer_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="20dp"
+        android:text="에이블리 회원이라면"
+        android:textColor="#555555"
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/second_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/first_text"
+        android:layout_alignStart="@id/drawer_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:text="누구나 무료배송!"
+        android:textColor="#000000"
+        android:textSize="23dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/third_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/second_text"
+        android:layout_alignStart="@id/drawer_btn"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="8dp"
+        android:text="더 큰 혜택 보기 >"
+        android:textColor="#0037FF"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <RelativeLayout
+        android:id="@+id/drawer_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/third_text"
+        android:layout_centerHorizontal="true">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/radius_login"
+            android:text="로그인"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:layout_width="140dp"
+            android:layout_height="50dp"
+            android:layout_alignBaseline="@id/btn_login"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/btn_login"
+            android:background="@drawable/radius_login"
+            android:text="5초 회원가입"
+            android:textSize="14dp"
+            android:textStyle="bold" />
+    </RelativeLayout>
+</RelativeLayout>

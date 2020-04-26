@@ -1,14 +1,15 @@
-package com.example.ably_eden.src.main;
+package com.example.ablyeden.src.main;
 
-import com.example.ably_eden.src.main.interfaces.MainActivityView;
-import com.example.ably_eden.src.main.interfaces.MainRetrofitInterface;
-import com.example.ably_eden.src.main.models.DefaultResponse;
+import com.example.ablyeden.src.main.interfaces.MainActivityView;
+import com.example.ablyeden.src.main.interfaces.MainRetrofitInterface;
+import com.example.ablyeden.src.main.models.DefaultResponse;
 
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-import static com.example.ably_eden.src.ApplicationClass.getRetrofit;
+import static com.example.ablyeden.src.ApplicationClass.getRetrofit;
+
 
 class MainService {
     private final MainActivityView mMainActivityView;

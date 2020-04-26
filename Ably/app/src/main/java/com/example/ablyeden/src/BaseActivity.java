@@ -1,4 +1,4 @@
-package com.example.ably_eden.src;
+package com.example.ablyeden.src;
 
 
 import android.annotation.SuppressLint;
@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.ably_eden.R;
+import com.example.ablyeden.R;
 
 @SuppressLint("Registered")
 public class BaseActivity extends AppCompatActivity {

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    >
+    <item
+        android:id="@+id/bottom_home"
+        android:checked="true"
+        android:enabled="true"
+        android:icon="@drawable/home"
+        android:iconTint="@drawable/home_select"
+        android:title="홈"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bottom_style"
+        android:enabled="true"
+        android:icon="@drawable/style"
+        android:iconTint="@drawable/style_select"
+        android:title="스타일"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bottom_market"
+        android:enabled="true"
+        android:icon="@drawable/market"
+        android:iconTint="@drawable/market_select"
+        android:title="마켓"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bottom_like"
+        android:enabled="true"
+        android:icon="@drawable/like"
+        android:iconTint="@drawable/like_select"
+        android:title="찜"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/bottom_my_page"
+        android:enabled="true"
+        android:icon="@drawable/mypage"
+        android:iconTintMode="screen"
+        android:iconTint="@drawable/mypage_select"
+        android:title="마이페이지"
+        app:showAsAction="always" />
+
+</menu>

@@ -1,4 +1,4 @@
-package com.example.ably_eden.src.main.interfaces;
+package com.example.ablyeden.src.main.interfaces;
 
 public interface MainActivityView {
 
