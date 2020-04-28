@@ -3,12 +3,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".src.main.market.MarketFragment">
+    tools:context=".src.main.fragTabNewFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="마켓" />
+        android:text="@string/hello_blank_fragment" />
 
 </FrameLayout>

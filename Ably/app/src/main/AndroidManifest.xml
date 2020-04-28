@@ -1,11 +1,11 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.example.ablyeden">
+    package="com.softsquared.ablyeden">
 
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name=".src.ApplicationClass"
+        android:name="com.softsquared.ablyeden.src.ApplicationClass"
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
@@ -15,7 +15,7 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
-        <activity android:name=".src.main.MainActivity">
+        <activity android:name="com.softsquared.ablyeden.src.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
