@@ -1,6 +1,65 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <ImageView
+        android:id="@+id/today_item_img"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:background="@drawable/radius" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/today_item_img"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@null"
+        android:src="@drawable/ic_favorite_border_black_24dp" />
+
+    <TextView
+        android:id="@+id/today_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_item_img"
+        android:layout_marginTop="5dp"
+        android:text="price"
+        android:textColor="#000000"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/today_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_item_price"
+        android:layout_marginTop="6dp"
+        android:text="shop_name"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/today_item_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_shop_name"
+        android:layout_marginTop="4dp"
+        android:text="설명"
+        android:textSize="11dp" />
+
+    <TextView
+        android:id="@+id/today_item_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/today_item_name"
+        android:layout_marginTop="10dp"
+        android:text="판매량"
+        android:textSize="12dp" />
+
+</RelativeLayout>

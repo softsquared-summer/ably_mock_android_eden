@@ -3,6 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
     tools:context=".src.main.home.tab_fragment_today.TabTodayFragment">
 
     <androidx.core.widget.NestedScrollView
@@ -10,6 +11,8 @@
         android:layout_height="match_parent">
 
         <RelativeLayout
+
+            android:id="@+id/layout_banner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
@@ -19,13 +22,78 @@
                 android:layout_height="wrap_content"
                 android:background="#ffffff"
                 android:scaleType="centerCrop"
-                android:src="@drawable/coupon" />
+                android:src="@drawable/coupon_pack" />
 
             <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewpager_banner"
                 android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:layout_below="@id/coupon" />
+                android:layout_height="300dp"
+                android:layout_below="@id/coupon">
 
+            </androidx.viewpager.widget.ViewPager>
+
+            <RelativeLayout
+                android:padding="3dp"
+                android:id="@+id/today_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/viewpager_banner"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/btn_radius"
+                android:elevation="12dp">
+
+                <Button
+                    android:id="@+id/btn_category"
+                    android:layout_width="190dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:background="@null"
+                    android:text="카테고리"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:background="@null"
+                    android:id="@+id/tv_bar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@+id/btn_category"
+                    android:gravity="center_vertical"
+                    android:text="|"
+                    android:textColor="#AEAEAE"
+                    android:textSize="20dp" />
+
+                <Button
+                    android:layout_width="190dp"
+                    android:layout_height="70dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/tv_bar"
+                    android:background="@null"
+                    android:text="쿠폰 / 이벤트"
+                    android:textSize="15dp"
+                    android:textStyle="bold" />
+            </RelativeLayout>
+
+
+            <TextView
+                android:id="@+id/tv_recommend"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/today_btn"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="10dp"
+                android:text="이규비님을 위한 추천상품"
+                android:textColor="#000000"
+                android:textSize="18dp"
+                android:textStyle="bold" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_today_item"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_recommend" />
         </RelativeLayout>
     </androidx.core.widget.NestedScrollView>
 

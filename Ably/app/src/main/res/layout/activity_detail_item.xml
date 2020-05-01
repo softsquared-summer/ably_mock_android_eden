@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".src.main.home.DetailItem">
+
+
+    <RelativeLayout
+        android:id="@+id/detail_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="10sp"
+        android:layout_marginTop="10sp"
+        android:layout_marginBottom="10dp">
+
+        <ImageButton
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:background="@null"
+            android:src="@drawable/back" />
+
+        <ImageButton
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_toLeftOf="@+id/detail_cart"
+            android:background="@null"
+            android:src="@drawable/search_white" />
+
+        <ImageButton
+            android:id="@+id/detail_cart"
+            android:layout_width="50sp"
+            android:layout_height="50sp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="10sp"
+            android:background="@null"
+            android:src="@drawable/cart_white" />
+    </RelativeLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/detail_top">
+
+        <RelativeLayout
+            android:id="@+id/detail_img"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/detail_view_pager"
+                android:layout_width="match_parent"
+                android:layout_height="300sp" />
+
+            <RelativeLayout
+                android:id="@+id/detail_item_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_view_pager">
+
+                <TextView
+                    android:id="@+id/detail_tv_item_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:text="상품이름"
+                    android:textSize="15sp" />
+
+                <TextView
+                    android:id="@+id/detail_tv_item_discount"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_tv_item_name"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:text="할인율"
+                    android:textColor="#E91E63"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detail_tv_item_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/detail_tv_item_discount"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="10sp"
+                    android:layout_toRightOf="@id/detail_tv_item_discount"
+                    android:text="가격"
+                    android:textColor="#000000"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detail_tv_item_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/detail_tv_item_discount"
+                    android:layout_marginLeft="10sp"
+                    android:layout_marginTop="20sp"
+                    android:text="상품코드"
+                    android:textSize="15sp" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/detail_bar"
+                android:layout_width="match_parent"
+                android:layout_height="1sp"
+                android:layout_below="@id/detail_item_info"
+                android:layout_marginTop="20sp"
+                android:background="#CCCCCC" />
+
+            <ImageView
+                android:id="@+id/detail_ship_img"
+                android:layout_width="match_parent"
+                android:layout_height="200sp"
+                android:layout_below="@id/detail_bar" />
+
+            <View
+                android:id="@+id/detail_bar_second"
+                android:layout_width="match_parent"
+                android:layout_height="8sp"
+                android:layout_below="@id/detail_ship_img"
+                android:layout_marginTop="20sp"
+                android:background="#E6E6E6" />
+
+            <RelativeLayout
+                android:id="@+id/detail_market_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_bar_second">
+
+                <ImageView
+                    android:id="@+id/detail_market_img"
+                    android:layout_width="50dp"
+                    android:layout_height="50dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp" />
+
+                <TextView
+                    android:id="@+id/detail_market_tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginTop="15dp"
+                    android:layout_toRightOf="@+id/detail_market_img"
+                    android:text="상점명"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/detail_market_tv_tag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/detail_market_img"
+                    android:layout_marginLeft="10dp"
+                    android:layout_toRightOf="@+id/detail_market_img"
+                    android:text="태그" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@id/detail_market_img"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:text="마켓 신상보기 >"
+                    android:textColor="#0000ff" />
+            </RelativeLayout>
+
+            <View
+
+                android:id="@+id/detail_bar_third"
+                android:layout_width="match_parent"
+                android:layout_height="8sp"
+                android:layout_below="@id/detail_market_info"
+                android:layout_marginTop="20sp"
+                android:background="#E6E6E6" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/detail_bar_third">
+
+                <com.google.android.material.tabs.TabLayout
+
+                    android:id="@+id/detail_tabLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="#ffffff"
+                    app:tabIndicatorColor="#3C3C3C"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorHeight="3dp"
+                    app:tabSelectedTextColor="#000000"
+                    app:tabTextAppearance="@style/tab_text"
+                    app:tabTextColor="#6C6C6C" />
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+    <RelativeLayout
+        android:id="@+id/detail_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:layout_alignParentBottom="true"
+        android:background="#ffffff">
+
+        <RelativeLayout
+            android:id="@+id/detail_favorite"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp">
+
+            <ImageButton
+                android:id="@+id/detail_favorite_img"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:background="@null"
+                android:scaleType="fitCenter"
+                android:src="@drawable/favorite_pink" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/detail_favorite_img"
+                android:layout_centerInParent="true"
+                android:gravity="center"
+                android:text="하트 수"
+                android:textColor="#FF0556"
+                android:textSize="11dp" />
+        </RelativeLayout>
+
+        <Button
+            android:layout_width="300dp"
+            android:layout_height="60dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="20dp"
+            android:background="@drawable/radius_buy"
+            android:text="구매하기"
+            android:textColor="#ffffff"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+</RelativeLayout>

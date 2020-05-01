@@ -50,40 +50,23 @@ public class MainActivity extends BaseActivity implements MainActivityView {
         mTvTopText = findViewById(R.id.main_top_text);
         mBtnCategory = findViewById(R.id.btn_main_category);
 
-        final DrawerLayout drawer = findViewById(R.id.drawer_layout);
-        NavigationView navigationView = findViewById(R.id.nav_view);
-
-
-        mBtnCategory.setOnClickListener(new ImageButton.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                drawer.openDrawer(Gravity.LEFT);
-            }
-        });
-
-
-        //fragment 생성
-        homeFragment = new HomeFragment();
-        likeFragment = new LikeFragment();
-        marketFragment = new MarketFragment();
-        myPageFragment = new MyPageFragment();
-        styleFragment = new StyleFragment();
-
         //제일 처음 띄워줄 뷰 세팅
+        homeFragment = new HomeFragment();
         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, homeFragment).commitAllowingStateLoss();
-
         //bottom_navigation_view 의 아이콘을 선택 했을때 원하는 프래그먼트가 띄워질 수 있도록 리스너를 추가
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem item) {
                 switch (item.getItemId()) {
                     case R.id.bottom_home: {
+                        homeFragment = new HomeFragment();
                         relativeLayout_home.setVisibility(View.VISIBLE);
                         relativeLayout_except.setVisibility(View.INVISIBLE);
                         getSupportFragmentManager().beginTransaction().replace(R.id.main_frame, homeFragment).commitAllowingStateLoss();
                         return true;
                     }
                     case R.id.bottom_style: {
+                        styleFragment = new StyleFragment();
                         relativeLayout_except.setVisibility(View.VISIBLE);
                         relativeLayout_home.setVisibility(View.INVISIBLE);
                         mTvTopText.setText("스타일");
@@ -91,6 +74,7 @@ public class MainActivity extends BaseActivity implements MainActivityView {
                         return true;
                     }
                     case R.id.bottom_market: {
+                        marketFragment = new MarketFragment();
                         relativeLayout_except.setVisibility(View.VISIBLE);
                         relativeLayout_home.setVisibility(View.INVISIBLE);
                         mTvTopText.setText("마켓");
@@ -98,6 +82,7 @@ public class MainActivity extends BaseActivity implements MainActivityView {
                         return true;
                     }
                     case R.id.bottom_like: {
+                        likeFragment = new LikeFragment();
                         relativeLayout_except.setVisibility(View.VISIBLE);
                         relativeLayout_home.setVisibility(View.INVISIBLE);
                         mTvTopText.setText("찜");
@@ -105,6 +90,7 @@ public class MainActivity extends BaseActivity implements MainActivityView {
                         return true;
                     }
                     case R.id.bottom_my_page: {
+                        myPageFragment = new MyPageFragment();
                         relativeLayout_except.setVisibility(View.VISIBLE);
                         relativeLayout_home.setVisibility(View.INVISIBLE);
                         mTvTopText.setText("마이페이지");

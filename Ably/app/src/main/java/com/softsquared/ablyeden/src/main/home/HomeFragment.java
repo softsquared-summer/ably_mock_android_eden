@@ -1,6 +1,7 @@
 package com.softsquared.ablyeden.src.main.home;
 
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +24,7 @@ public class HomeFragment extends Fragment {
     private View view;
     private TabLayout mTabLayout;
     private ViewPager mViewPager;
+    private TabPagerAdapter mTabPagerAdapter;
 
 //    // TODO: Rename parameter arguments, choose names that match
 //    // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -71,10 +73,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
 
         view = inflater.inflate(R.layout.fragment_home, container, false);
-
         mTabLayout = view.findViewById(R.id.tabLayout);
-        mViewPager = view.findViewById(R.id.view_pager);
-
 
 
         mTabLayout.addTab(mTabLayout.newTab().setText("투데이"));
@@ -84,12 +83,15 @@ public class HomeFragment extends Fragment {
 
         mTabLayout.setTabGravity(TabLayout.GRAVITY_FILL);
 
+        mViewPager = view.findViewById(R.id.home_view_pager);
+        mTabPagerAdapter = new TabPagerAdapter(getChildFragmentManager() ,mTabLayout.getTabCount());
 
-        TabPagerAdapter pagerAdapter = new TabPagerAdapter(getFragmentManager(), mTabLayout.getTabCount());
-        mViewPager.setAdapter(pagerAdapter);
+        mViewPager.setAdapter(mTabPagerAdapter);
 
         mViewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(mTabLayout));
+
         mTabLayout.addOnTabSelectedListener(new TabLayout.OnTabSelectedListener() {
+
             @Override
             public void onTabSelected(TabLayout.Tab tab) {
                 mViewPager.setCurrentItem(tab.getPosition());

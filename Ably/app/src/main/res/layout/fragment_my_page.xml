@@ -3,12 +3,274 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:layout_alignTop="@+id/bottom_navigation_view"
+    android:background="#EFEFEF"
     tools:context=".src.main.mypage.MyPageFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <androidx.core.widget.NestedScrollView
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="마이페이지" />
+        android:layout_height="wrap_content">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_radius"
+                android:paddingHorizontal="30dp">
+
+                <TextView
+                    android:id="@+id/first_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@id/drawer_btn"
+                    android:layout_marginTop="30dp"
+                    android:text="에이블리 회원이라면"
+                    android:textColor="#555555"
+                    android:textSize="17dp" />
+
+                <TextView
+                    android:id="@+id/second_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/first_text"
+                    android:layout_alignStart="@id/drawer_btn"
+                    android:layout_marginTop="8dp"
+                    android:text="누구나 무료배송!"
+                    android:textColor="#000000"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/third_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/second_text"
+                    android:layout_alignStart="@id/drawer_btn"
+                    android:layout_marginTop="8dp"
+                    android:text="더 큰 혜택 보기 >"
+                    android:textColor="#0037FF"
+                    android:textSize="14dp"
+                    android:textStyle="bold" />
+
+                <RelativeLayout
+                    android:id="@+id/drawer_btn"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/third_text"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="10dp">
+
+                    <Button
+                        android:id="@+id/btn_login"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/radius_login"
+                        android:text="로그인"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+
+                    <Button
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:layout_alignBaseline="@id/btn_login"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/btn_login"
+                        android:background="@drawable/radius_login"
+                        android:text="5초 회원가입"
+                        android:textSize="14dp"
+                        android:textStyle="bold" />
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="#ffffff"
+                android:orientation="horizontal"
+                android:weightSum="3">
+
+                <RelativeLayout
+                    android:id="@+id/my_page_ship"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/my_page_ship_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/ship" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/my_page_ship_img"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="주문/배송" />
+
+                </RelativeLayout>
+
+
+                <View
+                    android:id="@+id/detail_bar"
+                    android:layout_width="1sp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCCCC" />
+
+                <RelativeLayout
+
+                    android:id="@+id/my_page_point"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/my_page_point_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/point" />
+
+                    <TextView
+
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/my_page_point_img"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="포인트" />
+
+                </RelativeLayout>
+
+                <View
+                    android:id="@+id/detail_bar2"
+                    android:layout_width="1sp"
+                    android:layout_height="match_parent"
+                    android:background="#CCCCCC" />
+
+                <RelativeLayout
+
+                    android:id="@+id/my_page_coupon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginBottom="15dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/my_page_coupon_img"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:layout_centerHorizontal="true"
+                        android:src="@drawable/coupon" />
+
+                    <TextView
+                        android:layout_width="70dp"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/my_page_coupon_img"
+                        android:layout_centerInParent="true"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center"
+                        android:text="쿠폰 " />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:layout_marginBottom="20dp"
+                android:background="#ffffff"
+                android:orientation="vertical">
+
+
+                <Button
+                    android:id="@+id/my_page_notice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="15dp"
+                    android:text="공지사항"
+                    android:textAlignment="textStart" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#EFEFEF" />
+
+                <Button
+                    android:id="@+id/my_page_center"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="15dp"
+                    android:text="고객센터"
+                    android:textAlignment="textStart" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#EFEFEF" />
+
+                <Button
+                    android:id="@+id/my_page_service"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="15dp"
+                    android:text="서비스 이용약관"
+                    android:textAlignment="textStart" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#EFEFEF" />
+
+                <Button
+                    android:id="@+id/my_page_personality"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="15dp"
+                    android:text="개인정보 수집 및 이용"
+                    android:textAlignment="textStart" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1sp"
+                    android:background="#EFEFEF" />
+
+                <Button
+                    android:id="@+id/my_page_version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@null"
+                    android:padding="15dp"
+                    android:text="버전 정보 2.17.1"
+                    android:textAlignment="textStart" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
 </FrameLayout>

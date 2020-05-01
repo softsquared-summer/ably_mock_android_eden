@@ -5,9 +5,10 @@
     android:orientation="vertical">
 
     <ImageView
+        android:src="@drawable/img_pager_1"
         android:id="@+id/image_container"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:layout_centerInParent="true"
         android:scaleType="fitXY" />
 

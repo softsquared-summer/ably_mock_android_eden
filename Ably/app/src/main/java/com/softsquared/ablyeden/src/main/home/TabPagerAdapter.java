@@ -1,5 +1,7 @@
 package com.softsquared.ablyeden.src.main.home;
 
+import android.util.Log;
+
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -43,6 +45,7 @@ public class TabPagerAdapter extends FragmentStatePagerAdapter {
                 return null;
 
         }
+
     }
 
     @Override

@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     package="com.softsquared.ablyeden">
@@ -5,7 +6,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
-        android:name="com.softsquared.ablyeden.src.ApplicationClass"
+        android:name=".src.ApplicationClass"
         android:allowBackup="false"
         android:fullBackupContent="false"
         android:icon="@mipmap/ic_launcher"
@@ -15,7 +16,10 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning"
         tools:targetApi="n">
-        <activity android:name="com.softsquared.ablyeden.src.main.MainActivity">
+        <activity
+            android:name=".ui.login.MyPageLoginActivity"
+            android:label="@string/title_activity_my_page_login"></activity>
+        <activity android:name=".src.main.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -23,4 +27,5 @@
             </intent-filter>
         </activity>
     </application>
+
 </manifest>
