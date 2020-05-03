@@ -1,10 +1,10 @@
-package com.softsquared.ablyeden.src.main.home.tab_fragment_new.models;
+package com.softsquared.ablyeden.src.main.mypage.models;
 
 import com.google.gson.annotations.SerializedName;
 
 public class DefaultResponse {
-    @SerializedName("code")
-    private int code;
+    @SerializedName("result")
+    private int result;
 
     @SerializedName("message")
     private String message;
@@ -12,8 +12,11 @@ public class DefaultResponse {
     @SerializedName("isSuccess")
     private boolean isSuccess;
 
-    public int getCode() {
-        return code;
+    @SerializedName("code")
+    private int code;
+
+    public int getResult() {
+        return result;
     }
 
     public String getMessage() {
@@ -22,5 +25,9 @@ public class DefaultResponse {
 
     public boolean getIsSuccess() {
         return isSuccess;
+    }
+
+    public int getCode(){
+        return code;
     }
 }

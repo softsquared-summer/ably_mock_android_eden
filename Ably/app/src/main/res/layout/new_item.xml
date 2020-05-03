@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="10dp"
+    android:layout_marginTop="10dp"
+    android:layout_marginRight="10dp"
+    android:orientation="vertical"
+    android:layout_marginBottom="40dp">
+
+    <ImageView
+        android:scaleType="centerInside"
+        android:id="@+id/today_item_img"
+        android:layout_width="190dp"
+        android:layout_height="190dp"
+        android:background="@drawable/radiusitem" />
+
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@id/today_item_img"
+        android:layout_marginTop="15dp"
+        android:layout_marginRight="15dp"
+        android:background="@null"
+        android:src="@drawable/ic_favorite_border_black_24dp" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/today_item_discount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_item_img"
+        android:layout_marginTop="5dp"
+        android:layout_marginRight="10dp"
+        android:textColor="#E91E63"
+        android:textSize="15dp"
+        android:textStyle="bold" />
+
+    <TextView
+
+        android:id="@+id/today_item_price"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_item_img"
+        android:layout_marginTop="5dp"
+        android:layout_toRightOf="@id/today_item_discount"
+        android:text="price"
+        android:textColor="#000000"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/today_shop_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_item_price"
+        android:layout_marginTop="6dp"
+        android:text="shop_name"
+        android:textSize="12dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/today_item_name_explain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/today_shop_name"
+        android:layout_marginTop="4dp"
+        android:text="설명"
+        android:textSize="11dp" />
+
+    <TextView
+        android:id="@+id/today_item_hot_deal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/today_item_name_explain"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="3dp"
+        android:background="@drawable/hotdealradius"
+        android:paddingHorizontal="3dp"
+        android:paddingVertical="2dp"
+        android:text="핫딜"
+        android:textColor="#E91E63"
+        android:textSize="10dp"
+        android:visibility="visible" />
+
+    <TextView
+        android:id="@+id/today_item_sell"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/today_item_name_explain"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/today_item_hot_deal"
+        android:text="판매량"
+        android:textSize="12dp" />
+
+</RelativeLayout>
