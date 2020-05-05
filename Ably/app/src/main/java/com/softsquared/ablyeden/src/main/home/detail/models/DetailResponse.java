@@ -1,4 +1,4 @@
-package com.softsquared.ablyeden.src.main.models;
+package com.softsquared.ablyeden.src.main.home.models;
 
 import com.google.gson.annotations.SerializedName;
 
@@ -7,14 +7,11 @@ import java.util.ArrayList;
 
 public class DetailResponse {
 
-    public class Result {
 
+    public class Result {
 
         @SerializedName("productIdx")
         private int productIdx;
-
-        @SerializedName("thumbnailUrl")
-        private Array thumbnailUrl;
 
         @SerializedName("discountRatio")
         private String discountRatio;
@@ -37,22 +34,11 @@ public class DetailResponse {
         @SerializedName("isMyHeart")
         private String isMyHeart;
 
-        @SerializedName("isHotDeal")
-        private String isHotDeal;
-
-        @SerializedName("isNew")
-        private String isNew;
-
         @SerializedName("productName")
         private String productName;
 
         @SerializedName("purchaseCnt")
         private String purchaseCnt;
-
-
-    }
-
-    public class MarketInfo {
 
         @SerializedName("marketIdx")
         private int marketIdx;
@@ -66,13 +52,77 @@ public class DetailResponse {
         @SerializedName("marketThumbnailUrl")
         private String marketThumbnailUrl;
 
+        @SerializedName("normalImgUrlList")
+        private String normalImgUrlList;
+
+        @SerializedName("mainImgUrlList")
+        private String mainImgUrlList;
+
+        public String getMainImgUrlList() {
+            return mainImgUrlList;
+        }
+
+        public int getProductIdx() {
+            return productIdx;
+        }
+
+        public String getDiscountRatio() {
+            return discountRatio;
+        }
+
+        public String getDisplayedPrice() {
+            return displayedPrice;
+        }
+
+        public String getPrice() {
+            return price;
+        }
+
+        public String getProductCode() {
+            return productCode;
+        }
+
+        public String getContents() {
+            return contents;
+        }
+
+        public Array getImgUrlList() {
+            return imgUrlList;
+        }
+
+        public String getIsMyHeart() {
+            return isMyHeart;
+        }
+
+
+        public String getProductName() {
+            return productName;
+        }
+
+        public String getPurchaseCnt() {
+            return purchaseCnt;
+        }
+
+        public int getMarketIdx() {
+            return marketIdx;
+        }
+
+        public String getMarketName() {
+            return marketName;
+        }
+
+        public String getMarketHashTags() {
+            return marketHashTags;
+        }
+
+        public String getMarketThumbnailUrl() {
+            return marketThumbnailUrl;
+        }
     }
 
-    @SerializedName("result")
-    private ArrayList<Result> result;
 
-    @SerializedName("MarketInfo")
-    private ArrayList<MarketInfo> marketInfo;
+    @SerializedName("result")
+    private Result result;
 
 
     @SerializedName("code")
@@ -84,7 +134,7 @@ public class DetailResponse {
     @SerializedName("isSuccess")
     private boolean isSuccess;
 
-    public ArrayList<Result> getResult() {
+    public Result getResult() {
         return result;
     }
 
